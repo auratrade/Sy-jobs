@@ -1,0 +1,102 @@
+.card {
+  background: #ffffff; /* خلفية بيضاء نقية */
+  border: 1px solid #e5e7eb; /* حدود رمادية فاتحة */
+  border-radius: 12px; /* زوايا دائرية */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem; /* مسافة كبيرة بين البطاقات لتفصلها */
+  transition: all 0.3s ease;
+  
+  /* ظل خفيف يعطي إحساساً بالارتفاع */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  
+  /* شريط جانبي ملون (أزرق) لتمييز البطاقة */
+  border-right: 4px solid var(--accent);
+  position: relative;
+}
+
+/* تأثير عند تمرير الماوس */
+.card:hover {
+  transform: translateY(-4px); /* ترتفع البطاقة قليلاً */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* الظل يصبح أعمق */
+  border-color: #d1d5db;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #111827; /* لون داكن جداً للنص */
+}
+
+.title a {
+  transition: color 0.2s;
+}
+
+.title a:hover {
+  color: var(--accent);
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #6b7280;
+  white-space: nowrap;
+  background: #f3f4f6; /* خلفية رمادية فاتحة للتاريخ */
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+}
+
+.company {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.excerpt {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f3f4f6; /* خط فاصل خفيف جداً */
+  padding-top: 1rem;
+}
+
+.source {
+  font-size: 0.8rem;
+  color: #6b7280;
+  background: #f9fafb;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+}
+
+.more {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.more:hover {
+  transform: translateX(-4px);
+}

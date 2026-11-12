@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  turbopack: {
+    // تحديد جذر Turbopack ليكون مجلد job-filter نفسه
+    root: path.join(__dirname),
+  },
+  output: 'standalone',
 };
 
 export default nextConfig;
