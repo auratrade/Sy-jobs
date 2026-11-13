@@ -4,8 +4,7 @@ import fs from "fs";
 import path from "path";
 
 // مسار حفظ الملف (داخل مجلد المشروع)
-const dataFilePath = path.join(process.cwd(), "data.json");
-
+const dataFilePath = path.join(process.env.DATA_DIR || process.cwd(), "data.json");
 // دالة مساعدة لقراءة البيانات من الملف
 function readJobs() {
   try {
